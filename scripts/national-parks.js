@@ -1,16 +1,18 @@
 "use strict";
 console.log("Loading national-parks.js");
 
-const parkTypesArray = document.getElementById("parkTypeDataSelect")
-const nationalParksDataArray = document.getElementsById("nationalParkData")
+const nationalParkDataRow = document.getElementById("nationalParkDataRow");
 
-const locationsArray = document.getElement
+const parkTypesArray = document.getElementById("parkTypeDataSelect");
+const nationalParksDataArray = document.getElementsById("nationalParkData");
 
-const nationalParkDataRow = document.getElementById("nationalParkDataRow")
+const locationsArray;
+
+
 
 window.onload = function () {
+    
     parkTypesArray.onchange = onPartTypesArrayChange;
-
     nationalParksDataArray.onchange = onNationalParksDataArrayChange;
 
     hideNationalParkDataArraySelect();
