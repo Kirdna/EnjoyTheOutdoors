@@ -1,4 +1,4 @@
-const locationsArray = [
+const locations = [
     "Alabama",
     "Alaska",
     "American Samoa",

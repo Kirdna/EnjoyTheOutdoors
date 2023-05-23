@@ -1,4 +1,4 @@
-const nationalParksDataArray = [
+const nationalParksData = [
     {
     LocationID: "ABLI",
     LocationName: "Abraham Lincoln Birthplace National Historical Park",

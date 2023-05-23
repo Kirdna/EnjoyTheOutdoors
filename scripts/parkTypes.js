@@ -1,4 +1,4 @@
-const parkTypesArray = [
+const parkTypes = [
     "National Park",
     "National Monument",
     "Recreation Area",
