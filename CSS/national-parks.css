@@ -9,11 +9,11 @@ html{
 }
 
 #parkDetailRow {
-    background-image: linear-gradient( lightblue, rgb(16, 106, 82)) ;
+    background-image: linear-gradient( rgb(203, 211, 54), rgb(16, 106, 82)) ;
 }
 
 .card {
-    background-image: linear-gradient(to top right, lightblue, #2A571D) ;
+    background-image: linear-gradient(to top right, rgb(56, 77, 168), #359f45) ;
 }
 
 .navbar {
