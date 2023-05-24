@@ -11,65 +11,55 @@
 </head>
 
 <body>
-  <h1>National Parks</h1>
-  <div class="container">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a href="index.html"><img class="logo" width="70px" height="70px" src="/images/V-Ball Central-1.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">National Parks</a>
+            </li>
+            <li class="nav-item">
+              <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/mountain-info.html">Mountain Info</a></li>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--------------------SEARCH-BY-LOCATION----------------------------------->
+  <legend class="text-center">Find Parks Near You By Location!</legend>
+  <div class="container border">
     <div class="row">
       <div class="col">
-      <label for="parkTypeSelectRow">Search by Park Type:</label>
-      <select class="form-select" id="parkTypeSelectRow">
-        <option value="">Select Park Type</option>
+      <label for="parkLocation">Search by Location:</label>
+      <select class="form-select" id="parkLocationDropdown">
+        <option selected>Select Location</option>
       </select>
       </div>
     </div>
-  </div>
-  <!-- <div id="parkTypeSelectRow" class="row">
-    <div class="row"></div>
-      <div class="col">
-          <label for="parkTypeSelect">Park type:</label>
-          <select id="parkTypeSelect">
-            <option value="">Please Choose A Park Type</option>
-              <option value="National Park">National Park</option>
-              <option value="National Monument">National Monument</option>
-              <option value="Recreation Area">Recreation Area</option>
-              <option value="Scenic Trail">Scenic Trail</option>
-              <option value="Battlefield">Battlefield</option>
-              <option value="Historic">Historic</option>
-              <option value="Memorial">Memorial</option>
-              <option value="Preserve">Preserve</option>
-              <option value="Island">Island</option>
-              <option value="River">River</option>
-              <option value="Seashore">Seashore</option>
-              <option value="Trail">Trail</option>
-              <option value="Parkway">Parkway</option>
-          </select>                    
-      </div> -->
-
-
-  <!-------------------NATIONAL--PARK--DATA--SELECT--ROW------------------------------->
-  <div id="nationalParkDataSelectRow" class="row">
-
-    <div class="col">
-      <label for="nationalParkData">Parks:</label>
-      <select id="nationalParkData">
-
-      </select>
-    </div>
-
-  </div>
-
   </div>
   <!--------------NATIONAL--PARK--DATA--DETAIL--ROW------------------------------------------>
   <div id="parkDetailRow" class="row">
     <div class="col">
       <div class="card">
         <div class="card-body">
-          <h5 id="parkLocationName" class="card-title"> Abraham Lincoln Birthplace National Historical Park</h5>
+          <h4 id="parkName" class="card-title"></h4>
           <ul id="parkDetails" class="">
-            <li>LocationId:<span id="parkLocationId"> ABLI</span></li>
-            <li>Address:<span id="parkAddress"> 2995 Lincoln Farm Road</span></li>
-            <li>City:<span id="parkCity"> Hodgenville</span></li>
-            <li>State:<span id="parkState"> Kentucky</span></li>
-            <li>ZipCode:<span id="parkZipCode"> 42748</span></li>
+            <li>LocationId:<span id="parkLocationId"> </span></li>
+            <li>Address:<span id="parkAddrss"> </span></li>
+            <li>City:<span id="parkCity"> </span></li>
+            <li>State:<span id="parkState"></span></li>
+            <li>ZipCode:<span id="parkZipCode"> </span></li>
           </ul>
         </div>
       </div>
