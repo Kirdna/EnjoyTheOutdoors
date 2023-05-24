@@ -1,11 +1,9 @@
 "use strict";
 console.log("Loading national-parks.js");
 //-------------------------------------------------------------------------
-const nationalDataDetailRow = document.getElementById("nationalParkDataDetailRow");
+const parkDetailRow = document.getElementById("parkDetailRow");
 const nationalDataSelectRow = document.getElementById("nationalParkDataSelectRow");
-//-------------------------------------------------------------------------
-const parkTypes = document.getElementById("parkTypeSelect");
-const nationalParksData = document.getElementsById("nationalParkData");
+const parkTypeSelectRow = document.getElementById("parkTypeSelectRow")
 //-------------------------------------------------------------------------
 const parkLocationName = document.getElementById("parkLocationName");
 const parkLocationId = document.getElementById("parkLocationId");
@@ -14,35 +12,48 @@ const parkCity = document.getElementById("parkCity");
 const parkState = document.getElementById("parkState");
 const parkZipCode = document.getElementById("parkZipCode");
 //-------------------------------------------------------------------------
-window.onload = function () {
+window.onload = () => {
+    console.log("window load");
+    parkTypeSelectRow.onchange = onParkTypeChange;
+    //nationalParksData.onchange = onNationalParksDataChange;
     
-    parkTypes.onchange = onParkTypeChange;
-    nationalParksData.onchange = onNationalParksDataChange;
-
     hideNationalParkDataSelect();
     hideNationalParkDataDetail();
 
+    for(let parkType of parkTypesArray) {
+        let newOption = new Option(parkType);
+        parkTypeSelectRow.appendChild(newOption);       
+    }
+    
 }
 //-------------------------------------------------------------------------
-function onParkTypeChange(){
-    let currentParkType = parkTypes.value;
+function onParkTypeChange() {
+    console.log(parkTypeSelectRow);
+};
+//-------------------------------------------------------------------------------
+//function onLocationChange(){
 
-    if (currentParkType == "") {
-        hideNationalParkDataSelect();
-    }
-    else {
-        console.log(` ${currentParkType} value has been selected for type. `)
-    
-    populateNationalParksDataSelect(nationalParksData, currentParkType);
-    
-    showNationslParkDataSelect();
-    
-    }
+//}
 
-    hideNationalParkDataDetail();
 
-}
-//-------------------------------------------------------------------------
+    // let currentParkType = parkTypes.value;
+
+    // if (currentParkType == "") {
+    //     hideNationalParkDataSelect();
+    // }
+    // else {
+    //     console.log(` ${currentParkType} value has been selected for type. `)
+    
+    // populateNationalParksDataSelect(nationalParksData, currentParkType);
+    
+    // showNationslParkDataSelect();
+    
+    // }
+
+    //hideNationalParkDataDetail();
+
+//}
+//-------------------------------HELP------------------------------------------
 function populateNationalParksDataSelect(listOfParks, selectedType) {
 
     nationalParksData.innerHTML = "";
@@ -53,13 +64,13 @@ function populateNationalParksDataSelect(listOfParks, selectedType) {
     let typesOfParks = getTypesOfParks(listOfParks, selectedType);
 
     for (let thisPark of typesOfParks) {
-        let theOption = new Option(thisPark.LocationName, thisPark.State);
+        let theOption = new Option(thisPark.LocationName);
         nationalParksData.appendChild(theOption);
         console.log("The new option has been added to the dropdown.")
     }
 
 }
-//-------------------------------------------------------------------------
+//----------------------------HELP---------------------------------------------
 function getTypesOfParks(listOfParks, LocationName) {
     let result = [];
 
@@ -70,7 +81,7 @@ function getTypesOfParks(listOfParks, LocationName) {
     }
     return result;
 }
-//----------------------------------------------------------------
+//------------------------HELP---------------------------------------
 function onNationalParksDataChange() {
 
     let selectedParkId = nationalParksData.value;
@@ -95,22 +106,22 @@ function onNationalParksDataChange() {
     }
 
 }
-//-------------------------------------------------------------------------
-function getParkByType(LocationName) {
-    for (let i = 0; i < nationalParksData.length; 1++) {
-        let thisPark = nationalParksData[i];
-        if (thisPark.LocationName == LocationName) {
-            return thisPark;
-        }
-    }
-}
+//----------------------------HELP--------------------------------------------
+// function getParkByType(LocationName) {
+//     for (let i = 0; i < nationalParksData.length; 1++) {
+//         let thisPark = nationalParksData[i];
+//         if (thisPark.LocationName == LocationName) {
+//             return thisPark;
+//         }
+//     }
+// }
 //-------------------------------------------------------------------------
 function hideNationalParkDataDetail() {
-    nationalDataDetailRow.style.display = 'none';
+    parkDetailRow.style.display = 'none';
 }
 
 function showNationalParkDataDetail() {
-    nationalDataDetailRow.style.display = 'block';
+    parkDetailRow.style.display = 'block';
 }
 
 function hideNationalParkDataSelect() {
