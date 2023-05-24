@@ -13,7 +13,7 @@ html{
 }
 
 .card {
-    background-image: linear-gradient(to left, lightblue, #2A571D) ;
+    background-image: linear-gradient(to top right, lightblue, #2A571D) ;
 }
 
 .navbar {
