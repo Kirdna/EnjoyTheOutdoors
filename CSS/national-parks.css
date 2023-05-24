@@ -1,6 +1,6 @@
 
 body{
-    background: rgb(255, 255, 255);
+    background: #D6D242;
     height:100%;
 }
 
@@ -9,7 +9,7 @@ html{
 }
 
 #parkDetailRow {
-    background-image: linear-gradient( rgb(203, 211, 54), rgb(16, 106, 82)) ;
+    background-image: linear-gradient( #D6D242, rgb(16, 106, 82)) ;
 }
 
 .card {
@@ -18,4 +18,8 @@ html{
 
 .navbar {
     background-image: linear-gradient(to left, rgb(255, 255, 255), #D6D242);
+}
+
+ul {
+    color: white;
 }
