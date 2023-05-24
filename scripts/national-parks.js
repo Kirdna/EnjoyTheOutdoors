@@ -4,12 +4,12 @@ console.log("Loading national-parks.js");
 const parkLocationDropdown = document.getElementById("parkLocationDropdown")
 const parkDetailRow = document.getElementById("parkDetailRow");
 //-------------------------------------------------------------------------
-const parkLocationName = document.getElementById("parkLocationName");
-const parkLocationId = document.getElementById("parkLocationId");
-const parkAddress = document.getElementById("parkAddress");
-const parkCity = document.getElementById("parkCity");
-const parkState = document.getElementById("parkState");
-const parkZipCode = document.getElementById("parkZipCode");
+// const parkLocationName = document.getElementById("parkLocationName");
+// const parkLocationId = document.getElementById("parkLocationId");
+// const parkAddress = document.getElementById("parkAddress");
+// const parkCity = document.getElementById("parkCity");
+// const parkState = document.getElementById("parkState");
+// const parkZipCode = document.getElementById("parkZipCode");
 //-------------------------------------------------------------------------
 window.onload = () => {
     console.log("window load");
@@ -40,34 +40,55 @@ function parkLocationChange() {
         }
 
 
-
-};
-//-------------------------------------------------------------------------------
-
+}
+//-----------------------COL------------------------------------------------------------
 function makeParkCard(park) {
     let col = document.createElement("div");
-    col.className = "col";
+    col.className = "col-6 my-5";
     parkDetailRow.appendChild(col);
-
+//-----------------------CARD-------------------------------------------------------------
     let card = document.createElement("div");
     card.className = "card";
     col.appendChild(card);
-
+//-----------------------CARD BODY-------------------------------------------------------------
     let cardBody = document.createElement("div");
     cardBody.className = "card-body";
     card.appendChild(cardBody);
-
+//--------------------------H4-------------------------------------------------------------
     let h4parkName = document.createElement("h4");
     h4parkName.className = "card-title";
     h4parkName.innerHTML = park.LocationName;
     cardBody.appendChild(h4parkName);
-
+//------------------------------------------------------------------------------------
     let ulList = document.createElement("ul");
     ulList.className = "ul";
     h4parkName.appendChild(ulList);
-//----------------------------CONTINUE HERE!-----------------------------------------
+//------------------------------------------------------------------------------------
+    let listId = document.createElement("li");
+    listId.className = "parkId";
+    listId.innerHTML = "Id: " + park.LocationID;
+    ulList.appendChild(listId);
+//------------------------------------------------------------------------------------
+    let listAddress = document.createElement("li");
+    listAddress.className = "parkId";
+    listAddress.innerHTML = "Address: " + park.Address;
+    listId.appendChild(listAddress);
+//------------------------------------------------------------------------------------
+    let listCity = document.createElement("li");
+    listCity.className = "parkCity";
+    listCity.innerHTML = "City: " + park.City;
+    listAddress.appendChild(listCity);
+//------------------------------------------------------------------------------------
+    let listState = document.createElement("li");
+    listState.className = "parkState";
+    listState.innerHTML = "State: " + park.State;
+//------------------------------------------------------------------------------------
+    let listZipCode = document.createElement("li");
+    listZipCode.className = "parkId";
+    listZipCode.innerHTML = "Zip Code: " + park.ZipCode;
+    ulList.appendChild(listZipCode);
 
-    let
+    
 
 
 

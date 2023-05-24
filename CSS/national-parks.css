@@ -1,9 +1,21 @@
 
 body{
-    background: lightblue;
+    background: rgb(255, 255, 255);
     height:100%;
 }
 
 html{
     height:100%;
+}
+
+#parkDetailRow {
+    background-image: linear-gradient( lightblue, rgb(16, 106, 82)) ;
+}
+
+.card {
+    background-image: linear-gradient(to left, lightblue, #2A571D) ;
+}
+
+.navbar {
+    background-image: linear-gradient(to left, rgb(255, 255, 255), #D6D242);
 }
