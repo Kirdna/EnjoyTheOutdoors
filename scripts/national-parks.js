@@ -1,19 +1,18 @@
 "use strict";
 console.log("Loading national-parks.js");
 //-------------------------------------------------------------------------
-const parkLocationDropdown = document.getElementById("parkLocationDropdown")
+const parkLocationDropdown = document.getElementById("parkLocationDropdown");
+const parkTypeDropdown = document.getElementById("parkTypeDropdown");
+
+
 const parkDetailRow = document.getElementById("parkDetailRow");
 //-------------------------------------------------------------------------
-// const parkLocationName = document.getElementById("parkLocationName");
-// const parkLocationId = document.getElementById("parkLocationId");
-// const parkAddress = document.getElementById("parkAddress");
-// const parkCity = document.getElementById("parkCity");
-// const parkState = document.getElementById("parkState");
-// const parkZipCode = document.getElementById("parkZipCode");
-//-------------------------------------------------------------------------
+
 window.onload = () => {
     console.log("window load");
     parkLocationDropdown.onchange = parkLocationChange;
+
+
 
     // hideNationalParkDataSelect();
     // hideNationalParkDataDetail();
@@ -82,6 +81,7 @@ function makeParkCard(park) {
     let listState = document.createElement("li");
     listState.className = "parkState";
     listState.innerHTML = "State: " + park.State;
+    listCity.appendChild(listState);
 //------------------------------------------------------------------------------------
     let listZipCode = document.createElement("li");
     listZipCode.className = "parkId";
