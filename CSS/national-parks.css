@@ -23,5 +23,9 @@ html{
 ul {
     color: white;
 }
-
+ .form-select {
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+ }
 
